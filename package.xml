@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>diff_slam</name>
+  <version>0.1.0</version>
+  <description>
+    Differentiable Particle Filter (DPF) 3D LIDAR localization for ROS2 Humble.
+    Localizes a mobile robot in a pre-built point-cloud map using a learned
+    observation model and a differentiable particle filter.
+  </description>
+  <maintainer email="user@example.com">diff-slam maintainer</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- ROS2 runtime dependencies (available via apt / rosdep) -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>python3-message-filters</exec_depend>
+
+  <!--
+    pip-only dependencies (not in rosdep — install manually):
+      pip install torch rosbags open3d matplotlib tqdm asciichartpy
+  -->
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

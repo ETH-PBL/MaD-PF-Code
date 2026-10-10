@@ -1,0 +1,34 @@
+[project]
+name = "diff-slam"
+version = "0.1.0"
+requires-python = "==3.12.*"
+readme = "README.md"
+dependencies = [
+    "asciichartpy>=1.5.25",
+    "matplotlib>=3.10.8",
+    "open3d>=0.19.0",
+    "plotly>=6.7.0",
+    "pypcd4>=1.4.3",
+    "rosbags>=0.11.0",
+    "scipy>=1.17.1",
+    "scipy-stubs>=1.17.1.4",
+    "torch>=2.9.1",
+    "tqdm>=4.67.1",
+    "evo>=1.29.0",
+    "typing-extensions>=4.15.0",
+    "py-cpuinfo>=9.0.0",
+    "psutil>=5.9.0",
+    "wandb>=0.26.1",
+    "triton-windows>=3.7.0.post26; sys_platform == 'win32'",
+    "tyro==1.0.13",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
+torchaudio = { index = "pytorch-cu130" }
